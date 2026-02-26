@@ -1,0 +1,256 @@
+/* =============================
+   FORMATIONS PAGE
+============================= */
+
+/* ---- Grille formations ---- */
+.formations-intro {
+  background: var(--blanc);
+  padding: 80px 0;
+}
+.formations-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 56px;
+}
+.formation-card {
+  background: var(--creme);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--ombre-douce);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.formation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--ombre-forte);
+}
+.formation-card-top {
+  padding: 36px 36px 24px;
+  background: linear-gradient(135deg, var(--vert-profond) 0%, var(--vert-foret) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.formation-card:nth-child(2) .formation-card-top {
+  background: linear-gradient(135deg, #3D405B 0%, #6B7290 100%);
+}
+.formation-card-top::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.formation-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.formation-card-name {
+  font-family: var(--font-titre);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--blanc);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.formation-card-duration {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+}
+.formation-card-body {
+  padding: 28px 36px 36px;
+}
+.formation-card-desc {
+  font-size: 0.95rem;
+  color: var(--gris-moyen);
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+.formation-modules {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.formation-modules li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--anthracite);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--creme-fonce);
+}
+.formation-modules li:last-child { border-bottom: none; }
+.formation-modules li i {
+  color: var(--vert-foret);
+  width: 16px;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.formation-diploma {
+  background: var(--blanc);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.formation-diploma i { color: var(--or); font-size: 1.2rem; }
+.formation-diploma span { font-size: 0.85rem; font-weight: 600; color: var(--anthracite); }
+.btn-formation {
+  width: 100%;
+  padding: 14px;
+  background: var(--vert-profond);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-corps);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blanc);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-formation:hover {
+  background: var(--or);
+  color: var(--vert-profond);
+  transform: translateY(-2px);
+}
+
+/* ---- Modules thématiques ---- */
+.modules-section {
+  background: var(--creme);
+  padding: 80px 0;
+}
+.modules-band {
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--ombre-douce);
+  margin-top: 48px;
+}
+.modules-band-title {
+  font-family: var(--font-titre);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--vert-profond);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modules-band-title i { color: var(--or); }
+.modules-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.module-tag {
+  background: var(--creme);
+  border: 1px solid var(--creme-fonce);
+  color: var(--vert-profond);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+.module-tag:hover {
+  background: var(--vert-foret);
+  color: var(--blanc);
+  border-color: var(--vert-foret);
+  transform: translateY(-2px);
+}
+
+/* ---- Débouchés ---- */
+.debouches-section {
+  background: var(--blanc);
+  padding: 80px 0;
+}
+.debouches-header {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 56px;
+}
+.debouches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.debouche-card {
+  background: var(--creme);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  border: 1px solid var(--creme-fonce);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.debouche-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--vert-clair);
+  box-shadow: var(--ombre-douce);
+}
+.debouche-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--vert-profond);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--or-clair);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.debouche-title {
+  font-family: var(--font-titre);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--vert-profond);
+  margin-bottom: 10px;
+}
+.debouche-desc {
+  font-size: 0.88rem;
+  color: var(--gris-moyen);
+  line-height: 1.7;
+}
+.debouche-examples {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.debouche-pill {
+  background: var(--blanc);
+  border: 1px solid var(--creme-fonce);
+  color: var(--anthracite);
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .formations-intro-grid { grid-template-columns: 1fr; }
+  .debouches-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .debouches-grid { grid-template-columns: 1fr; }
+  .modules-band { padding: 24px; }
+}

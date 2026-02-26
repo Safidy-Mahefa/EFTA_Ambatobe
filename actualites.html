@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualités — EFTA Ambatobe</title>
+  <meta name="description" content="Toutes les actualités de l'EFTA Ambatobe : cérémonies de diplômes, ouvertures de candidatures, partenariats, vie du campus." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="./src/css/all.min.css" />
+  <link rel="stylesheet" href="./src/css/global.css" />
+  <link rel="stylesheet" href="./src/css/pages.css" />
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero" aria-label="En-tête actualités">
+    <div class="page-hero-blob page-hero-blob-1"></div>
+    <div class="page-hero-blob page-hero-blob-2"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="page-hero-label"><i class="fas fa-newspaper"></i> Actualités</div>
+        <h1>La vie de <em>l'EFTA</em><br>en temps réel</h1>
+        <p class="page-hero-desc">
+          Cérémonies de remise de diplômes, ouvertures de candidatures, partenariats et actualités du campus d'Ambatobe.
+        </p>
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Actualités</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="actu-section" aria-label="Toutes les actualités">
+    <div class="container">
+      <!-- Filtres -->
+      <div class="actu-filters reveal">
+        <button class="actu-filter-btn active" data-filter="all">Tout</button>
+        <button class="actu-filter-btn" data-filter="evenement">Événements</button>
+        <button class="actu-filter-btn" data-filter="candidatures">Candidatures</button>
+        <button class="actu-filter-btn" data-filter="partenariat">Partenariats</button>
+        <button class="actu-filter-btn" data-filter="vie-campus">Vie Campus</button>
+      </div>
+
+      <div class="actu-grid">
+        <div class="actu-card reveal" data-cat="evenement">
+          <div class="actu-card-img">
+            <span class="actu-card-img-label">Événement</span>
+            <img src="./assets/pictures/actu-img1.webp" alt="Cérémonie de remise des diplômes" loading="lazy">
+          </div>
+          <div class="actu-card-body">
+            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_CEREMONIE]</p>
+            <h3 class="actu-title">Cérémonie officielle de remise des diplômes — Promotion [ANNEE]</h3>
+            <p class="actu-desc">
+              Grande cérémonie nationale de sortie de promotion organisée à l'EFTA Ambatobe. Les lauréats du BTSA et du Certificat AC/AE reçoivent officiellement leurs diplômes en présence des autorités du MINAE.
+            </p>
+            <a href="#" class="actu-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="actu-card reveal reveal-delay-1" data-cat="candidatures">
+          <div class="actu-card-img">
+            <span class="actu-card-img-label">Candidatures</span>
+            <i class="fas fa-file-alt" style="color:rgba(255,255,255,0.3);font-size:2.5rem;"></i>
+          </div>
+          <div class="actu-card-body">
+            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_OUVERTURE]</p>
+            <h3 class="actu-title">Ouverture des candidatures [ANNEE_SCOLAIRE]</h3>
+            <p class="actu-desc">Les dossiers de candidature pour la rentrée [ANNEE] sont désormais ouverts. Retrouvez toutes les modalités dans la section Admission.</p>
+            <a href="admission.html" class="actu-link">Candidater <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="actu-card reveal reveal-delay-2" data-cat="partenariat">
+          <div class="actu-card-img">
+            <span class="actu-card-img-label">Partenariat</span>
+            <i class="fas fa-handshake" style="color:rgba(255,255,255,0.3);font-size:2.5rem;"></i>
+          </div>
+          <div class="actu-card-body">
+            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_PARTENARIAT]</p>
+            <h3 class="actu-title">Renforcement du partenariat EFTA-GSDM dans l'agro-écologie</h3>
+            <p class="actu-desc">Le GSDM et l'EFTA Ambatobe renforcent leur collaboration pour la formation de conseillers en Agriculture de Conservation.</p>
+            <a href="partenaires.html" class="actu-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="actu-card reveal" data-cat="vie-campus">
+          <div class="actu-card-img">
+            <span class="actu-card-img-label">Vie Campus</span>
+            <i class="fas fa-users" style="color:rgba(255,255,255,0.3);font-size:2.5rem;"></i>
+          </div>
+          <div class="actu-card-body">
+            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_ACTU]</p>
+            <h3 class="actu-title">Visite d'études dans les régions agricoles du Vakinankaratra</h3>
+            <p class="actu-desc">Les étudiants de 2ème année ont effectué un voyage d'études dans la région du Vakinankaratra pour découvrir les pratiques de l'agriculture de conservation en milieu réel.</p>
+            <a href="#" class="actu-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="actu-card reveal reveal-delay-1" data-cat="evenement">
+          <div class="actu-card-img">
+            <span class="actu-card-img-label">Événement</span>
+            <i class="fas fa-award" style="color:rgba(255,255,255,0.3);font-size:2.5rem;"></i>
+          </div>
+          <div class="actu-card-body">
+            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_ACTU2]</p>
+            <h3 class="actu-title">Résultats du concours national d'entrée — Promotion [ANNEE]</h3>
+            <p class="actu-desc">Les résultats du concours national d'entrée sont disponibles. Les lauréats sont convoqués pour la rentrée officielle. Félicitations aux admis !</p>
+            <a href="admission.html" class="actu-link">Voir l'admission <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="actu-card reveal reveal-delay-2" data-cat="partenariat">
+          <div class="actu-card-img">
+            <span class="actu-card-img-label">Partenariat</span>
+            <i class="fas fa-globe" style="color:rgba(255,255,255,0.3);font-size:2.5rem;"></i>
+          </div>
+          <div class="actu-card-body">
+            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_ACTU3]</p>
+            <h3 class="actu-title">Mission de suivi UNESCO-UNEVOC à l'EFTA Ambatobe</h3>
+            <p class="actu-desc">Une délégation de l'UNESCO-UNEVOC a effectué une visite de suivi à l'EFTA Ambatobe pour évaluer la mise en œuvre de la réforme curriculaire APC.</p>
+            <a href="partenaires.html" class="actu-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./src/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Filtres actus
+      const btns = document.querySelectorAll('.actu-filter-btn');
+      const cards = document.querySelectorAll('.actu-card[data-cat]');
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.dataset.filter;
+          cards.forEach(card => {
+            card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

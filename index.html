@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EFTA Ambatobe — École de Formation de Technicien Agricole</title>
   <meta name="description" content="L'EFTA Ambatobe forme les techniciens agricoles de demain à Antananarivo, Madagascar. BTSA 2 ans, Certificat AC/AE. Candidatures ouvertes." />
-  <meta name="keywords" content="EFTA Ambatobe, agriculture Madagascar, formation agricole, BTSA, technicien agricole, Antananarivo" />
   <meta property="og:title" content="EFTA Ambatobe — École de Formation de Technicien Agricole" />
   <meta property="og:description" content="Former les agriculteurs de demain, nourrir Madagascar aujourd'hui." />
   <meta property="og:type" content="website" />
@@ -13,110 +12,24 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" />
+  <link rel="preload" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" />
 
   <!-- CSS -->
-   <style>
-    /* =============================
-       CSS VARIABLES & RESET
-    ============================= */
-    :root {
-      --vert-profond:   #1B4332;
-      --vert-foret:     #2D6A4F;
-      --vert-clair:     #52B788;
-      --or:             #D4A853;
-      --or-clair:       #F0C977;
-      --creme:          #F7F3ED;
-      --creme-fonce:    #EDE8DF;
-      --terre:          #8B6914;
-      --anthracite:     #2B2D42;
-      --gris-moyen:     #6B7280;
-      --blanc:          #FFFFFF;
-
-      --font-titre:     'Cormorant Garamond', serif;
-      --font-corps:     'DM Sans', sans-serif;
-
-      --ombre-douce:    0 4px 24px rgba(27,67,50,0.10);
-      --ombre-forte:    0 12px 48px rgba(27,67,50,0.18);
-      --radius:         12px;
-      --radius-lg:      24px;
-      --transition:     0.35s cubic-bezier(0.4,0,0.2,1);
-    }
-    #navbar {
-      background: rgba(247,243,237,0.96);
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 20px 0;
-      transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
-    }
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background: var(--vert-profond);
-      z-index: 1;
-    }
-   </style>
-   <link rel="preload" href="./src/css/style.css" as="style" onload="this.rel='stylesheet'">
-   <!-- Font awesome -->
-   <link rel="preload" as="style" onload="this.rel='stylesheet'" href="./src/css/all.min.css"/>
-   <link rel="stylesheet" href="./src/css/chatbot.css">
-
-  <!-- ===========================
-       JAVASCRIPT
-  =========================== -->
-  <script src="./src/js/index.js" defer></script>
-  <script src="./src/js/chatbot.js" async></script>
-
-   
+  <link rel="stylesheet" href="./src/css/all.min.css"/>
+  <link rel="stylesheet" href="./src/css/global.css"/>
+  <link rel="stylesheet" href="./src/css/home.css"/>
+  <link rel="stylesheet" href="./src/css/chatbot.css"/>
 </head>
 <body>
 
-  <!-- ===== MOBILE MENU ===== -->
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
-    <button class="mobile-menu-close" id="closeMenu" aria-label="Fermer le menu"><i class="fas fa-times"></i></button>
-    <a href="#about" onclick="closeMobileMenu()">À Propos</a>
-    <a href="#formations" onclick="closeMobileMenu()">Formations</a>
-    <a href="#admission" onclick="closeMobileMenu()">Admission</a>
-    <a href="#partenaires" onclick="closeMobileMenu()">Partenaires</a>
-    <a href="#actualites" onclick="closeMobileMenu()">Actualités</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-  </div>
-
-  <!-- ===== NAVBAR ===== -->
-  <nav id="navbar" role="navigation" aria-label="Navigation principale">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="#hero" class="nav-logo" aria-label="Accueil EFTA Ambatobe">
-          <div class="nav-logo-emblem" aria-hidden="true"><i class="fas fa-seedling"></i></div>
-          <div class="nav-logo-text">
-            <span class="nav-logo-name">EFTA Ambatobe</span>
-            <span class="nav-logo-sub">Madagascar</span>
-          </div>
-        </a>
-        <ul class="nav-links" role="list">
-          <li><a href="#about">À Propos</a></li>
-          <li><a href="#formations">Formations</a></li>
-          <li><a href="#admission">Admission</a></li>
-          <li><a href="#partenaires">Partenaires</a></li>
-          <li><a href="#actualites">Actualités</a></li>
-          <li><a href="#contact" class="nav-cta">Nous Contacter</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
+  <!-- Navbar injectée dynamiquement -->
+  <div id="navbar-placeholder"></div>
 
   <!-- ===== HERO ===== -->
   <section id="hero" aria-label="Bannière principale">
     <div class="hero-blob hero-blob-1"></div>
     <div class="hero-blob hero-blob-2"></div>
-
     <div class="container">
       <div class="hero-content">
         <!-- Left -->
@@ -135,11 +48,11 @@
             L'École de Formation de Technicien Agricole d'Ambatobe prépare les futurs techniciens supérieurs agricoles, éleveurs et pêcheurs de Madagascar grâce à une pédagogie moderne et des formations professionnalisantes reconnues.
           </p>
           <div class="hero-actions">
-            <a href="#formations" class="btn-primary">
+            <a href="formations.html" class="btn-primary">
               <i class="fas fa-graduation-cap"></i>
               Nos Formations
             </a>
-            <a href="#admission" class="btn-secondary">
+            <a href="admission.html" class="btn-secondary">
               <i class="fas fa-file-alt"></i>
               Candidater
             </a>
@@ -150,9 +63,8 @@
         <div class="hero-visual">
           <div class="hero-card-stack">
             <div class="hero-main-card">
-              <div class="hero-card-icon"></div> <!-- icon -->
               <div class="hero-card-title">EFTA Ambatobe</div>
-              <div class="hero-card-sub">École Publique — Tutelle MINAE • Décret N°2017-765</div>
+              <div class="hero-card-sub">École Publique — Tutelle MINAE · Décret N°2017-765</div>
               <div class="hero-stats-grid">
                 <div class="hero-stat">
                   <div class="hero-stat-num">2</div>
@@ -163,12 +75,12 @@
                   <div class="hero-stat-label">Filières</div>
                 </div>
                 <div class="hero-stat">
-                  <div class="hero-stat-num">Bac<span class="hero-stat-num" style="font-size:1.2rem">+2</span></div>
+                  <div class="hero-stat-num">Bac+2</div>
                   <div class="hero-stat-label">Niveau</div>
                 </div>
                 <div class="hero-stat">
                   <div class="hero-stat-num">6</div>
-                  <div class="hero-stat-label">EFTA Madagascar</div>
+                  <div class="hero-stat-label">EFTA Mada</div>
                 </div>
               </div>
             </div>
@@ -184,7 +96,6 @@
         </div>
       </div>
     </div>
-
     <div class="scroll-indicator" aria-hidden="true">
       <div class="scroll-line"></div>
       <span>Défiler</span>
@@ -272,7 +183,7 @@
       <div class="stats-grid">
         <div class="stat-item reveal">
           <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-          <div class="stat-num" data-target="6">6</div>
+          <div class="stat-num">6</div>
           <div class="stat-label">EFTA dans tout<br>Madagascar</div>
         </div>
         <div class="stat-item reveal reveal-delay-1">
@@ -282,669 +193,168 @@
         </div>
         <div class="stat-item reveal reveal-delay-2">
           <div class="stat-icon"><i class="fas fa-seedling"></i></div>
-          <div class="stat-num" data-target="3">3</div>
+          <div class="stat-num">3</div>
           <div class="stat-label">Filières : Agriculture,<br>Élevage, Pêche</div>
         </div>
         <div class="stat-item reveal reveal-delay-3">
           <div class="stat-icon"><i class="fas fa-award"></i></div>
-          <div class="stat-num" data-target="22">22+</div>
+          <div class="stat-num">22+</div>
           <div class="stat-label">Techniciens diplômés<br>1ère promotion</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FORMATIONS ===== -->
-  <section id="formations" aria-label="Nos formations">
+  <!-- ===== APERÇU FORMATIONS ===== -->
+  <section id="formations-apercu" aria-label="Aperçu des formations">
     <div class="container">
-      <div class="formations-header">
+      <div class="formations-apercu-header">
         <div class="section-label reveal">Nos Formations</div>
         <h2 class="section-title reveal reveal-delay-1">
           Des cursus <em>professionnalisants</em><br>reconnus nationalement
         </h2>
         <p class="section-desc reveal reveal-delay-2">
-          Deux formations complémentaires pour bâtir une carrière solide dans les secteurs de l'agriculture, l'élevage et la pêche à Madagascar.
+          Deux formations complémentaires pour bâtir une carrière solide dans l'agriculture, l'élevage et la pêche à Madagascar.
         </p>
       </div>
 
-      <div class="formations-grid">
-        <!-- Card 1: BTSA -->
-        <div class="formation-card reveal">
-          <div class="formation-card-top">
-            <div class="formation-tag">Formation Initiale</div>
-            <div class="formation-card-icon"></div> <!-- icon -->
-            <div class="formation-card-name">BTSA — Brevet de Technicien Supérieur Agricole</div>
-            <div class="formation-card-duration"><i class="fas fa-clock"></i> Durée : 2 ans · Niveau Bac+2</div>
+      <div class="formations-apercu-grid">
+        <!-- BTSA -->
+        <div class="formation-preview-card reveal">
+          <div class="formation-preview-top">
+            <div class="formation-preview-tag">Formation Initiale</div>
+            <div class="formation-preview-name">BTSA — Brevet de Technicien Supérieur Agricole</div>
+            <div class="formation-preview-dur"><i class="fas fa-clock"></i> 2 ans · Niveau Bac+2</div>
           </div>
-          <div class="formation-card-body">
-            <p class="formation-card-desc">
-              Formation professionnelle initiale prépare des techniciens supérieurs agricoles polyvalents, couvrant les trois secteurs fondamentaux. Le référentiel national a été validé en 2017 et appliqué dès 2018 selon l'Approche par les Compétences (APC).
+          <div class="formation-preview-body">
+            <p class="formation-preview-desc">
+              Formation professionnelle initiale couvrant les trois secteurs fondamentaux : productions végétales, élevage et pêche. Référentiel national validé en 2017, pédagogie APC depuis 2018.
             </p>
-            <ul class="formation-modules">
-              <li><i class="fas fa-check"></i> Productions végétales & cultures</li>
-              <li><i class="fas fa-check"></i> Conduite d'élevage & santé animale</li>
-              <li><i class="fas fa-check"></i> Pêche & ressources halieutiques</li>
-              <li><i class="fas fa-check"></i> Communication professionnelle</li>
-              <li><i class="fas fa-check"></i> Stages en milieu agricole</li>
-              <li><i class="fas fa-check"></i> Développement humain & personnel</li>
-            </ul>
-            <div class="formation-diploma">
-              <i class="fas fa-medal"></i>
-              <span>Diplôme : BTSA — Reconnu par l'État Malgache</span>
-            </div>
-            <a href="#admission" class="btn-formation">
-              <i class="fas fa-arrow-right"></i>
-              Candidater pour cette formation
+            <a href="formations.html#btsa" class="formation-preview-link">
+              Découvrir le BTSA <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
 
-        <!-- Card 2: AC/AE -->
-        <div class="formation-card reveal reveal-delay-2">
-          <div class="formation-card-top">
-            <div class="formation-tag">Spécialisation</div>
-            <div class="formation-card-icon"></div><!-- icon -->
-            <div class="formation-card-name">Conseiller en Agriculture de Conservation & Agro-écologie</div>
-            <div class="formation-card-duration"><i class="fas fa-clock"></i> Durée : 1 an · Certificat de Spécialisation</div>
+        <!-- AC/AE -->
+        <div class="formation-preview-card reveal reveal-delay-2">
+          <div class="formation-preview-top">
+            <div class="formation-preview-tag">Spécialisation</div>
+            <div class="formation-preview-name">Conseiller Agriculture de Conservation & Agro-écologie</div>
+            <div class="formation-preview-dur"><i class="fas fa-clock"></i> 1 an · Certificat de Spécialisation</div>
           </div>
-          <div class="formation-card-body">
-            <p class="formation-card-desc">
-              Certificat de spécialisation en Agriculture de Conservation (AC) et Agro-écologie (AE). Appliqué à l'EFTA Ambatobe depuis 2018-2019, en partenariat avec le GSDM dans le cadre du projet PAPAM financé par l'AFD.
+          <div class="formation-preview-body">
+            <p class="formation-preview-desc">
+              Certificat de spécialisation en Agriculture de Conservation (AC) et Agro-écologie (AE), en partenariat avec le GSDM dans le cadre du projet PAPAM (AFD).
             </p>
-            <ul class="formation-modules">
-              <li><i class="fas fa-check"></i> Agriculture de conservation</li>
-              <li><i class="fas fa-check"></i> Systèmes agro-écologiques</li>
-              <li><i class="fas fa-check"></i> Suivi-évaluation terrain</li>
-              <li><i class="fas fa-check"></i> Conseil aux exploitants</li>
-              <li><i class="fas fa-check"></i> Voyages d'études</li>
-              <li><i class="fas fa-check"></i> Projet PAPAM (AFD)</li>
-            </ul>
-            <div class="formation-diploma">
-              <i class="fas fa-medal"></i>
-              <span>Diplôme : Certificat de Spécialisation AC/AE</span>
-            </div>
-            <a href="#contact" class="btn-formation">
-              <i class="fas fa-info-circle"></i>
-              Demander des informations
+            <a href="formations.html#acae" class="formation-preview-link">
+              Découvrir le Certificat AC/AE <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Modules thématiques -->
-      <div class="modules-band reveal">
-        <div class="modules-band-title">
+      <div class="formations-apercu-cta reveal">
+        <a href="formations.html" class="btn-green">
           <i class="fas fa-layer-group"></i>
-          Thématiques transversales abordées
-        </div>
-        <div class="modules-tags">
-          <span class="module-tag">Productions végétales</span>
-          <span class="module-tag">Élevage bovin</span>
-          <span class="module-tag">Ressources halieutiques</span>
-          <span class="module-tag">Agro-écologie</span>
-          <span class="module-tag">Irrigation & eau</span>
-          <span class="module-tag">Changement climatique</span>
-          <span class="module-tag">Suivi-évaluation</span>
-          <span class="module-tag">Communication rurale</span>
-          <span class="module-tag">Développement rural</span>
-          <span class="module-tag">Sciences agricoles</span>
-          <span class="module-tag">Gestion d'exploitation</span>
-          <span class="module-tag">Conseil paysan</span>
-          <span class="module-tag">Expérimentation agricole</span>
-          <span class="module-tag">Mécanisation agricole</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ADMISSION ===== -->
-  <section id="admission" aria-label="Processus d'admission">
-    <div class="container">
-      <div class="admission-grid">
-        <!-- Steps -->
-        <div>
-          <div class="section-label reveal">Admission</div>
-          <h2 class="section-title reveal reveal-delay-1">
-            Comment <em>intégrer</em><br>l'EFTA Ambatobe ?
-          </h2>
-          <p class="section-desc reveal reveal-delay-2" style="margin-bottom: 48px;">
-            Le processus d'admission se déroule en trois étapes claires. Un concours national est organisé chaque année pour sélectionner les meilleurs candidats.
-          </p>
-
-          <div class="admission-steps">
-            <!-- Étape 1 -->
-            <div class="admission-step reveal reveal-delay-1">
-              <div class="step-connector">
-                <div class="step-num">1</div>
-                <div class="step-line"></div>
-              </div>
-              <div class="step-body">
-                <h3 class="step-title">Vérifier les conditions d'accès</h3>
-                <p class="step-desc">
-                  Assurez-vous de remplir toutes les conditions requises pour être éligible au concours national d'entrée.
-                </p>
-                <div class="step-conditions">
-                  <span class="condition-pill">Baccalauréat A2, C, D ou S</span>
-                  <span class="condition-pill">18 à 25 ans</span>
-                  <span class="condition-pill">Célibataire</span>
-                  <span class="condition-pill">Deux sexes acceptés</span>
-                  <span class="condition-pill">Bac Agricole ou DTA accepté</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Étape 2 -->
-            <div class="admission-step reveal reveal-delay-2">
-              <div class="step-connector">
-                <div class="step-num">2</div>
-                <div class="step-line"></div>
-              </div>
-              <div class="step-body">
-                <h3 class="step-title">Constituer et déposer votre dossier</h3>
-                <p class="step-desc">
-                  Rassemblez tous les documents requis et envoyez votre dossier complet à la direction de l'EFTA Ambatobe avant la date limite.
-                </p>
-                <div class="step-conditions">
-                  <span class="condition-pill">Demande manuscrite au Directeur</span>
-                  <span class="condition-pill">Extrait acte de naissance</span>
-                  <span class="condition-pill">Certificat de résidence</span>
-                  <span class="condition-pill">Copie certifiée du Baccalauréat</span>
-                  <span class="condition-pill">Enveloppe timbrée 1 000 Ar</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Étape 3 -->
-            <div class="admission-step reveal reveal-delay-3">
-              <div class="step-connector">
-                <div class="step-num">3</div>
-                <div class="step-line"></div>
-              </div>
-              <div class="step-body">
-                <h3 class="step-title">Passer le concours national</h3>
-                <p class="step-desc">
-                  Présentez-vous au concours national d'entrée. Les lauréats sont convoqués pour intégrer la 1ère année à la rentrée suivante.
-                </p>
-                <div class="step-conditions">
-                  <span class="condition-pill">Épreuves écrites</span>
-                  <span class="condition-pill">Épreuve orale éventuelle</span>
-                  <span class="condition-pill">Rentrée [ANNEE_CONCOURS]</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dossier Card -->
-        <div class="reveal reveal-delay-2">
-          <div class="dossier-card">
-            <div class="dossier-header">
-              <h3><i class="fas fa-folder-open" style="margin-right:10px;"></i>Pièces du Dossier</h3>
-              <p>Documents obligatoires pour votre candidature</p>
-            </div>
-            <div class="dossier-body">
-              <div class="dossier-item">
-                <div class="dossier-item-icon"><i class="fas fa-pen"></i></div>
-                <div class="dossier-item-text">
-                  <strong>Demande d'inscription manuscrite</strong>
-                  <span>Adressée au Directeur de l'EFTA Ambatobe</span>
-                </div>
-              </div>
-              <div class="dossier-item">
-                <div class="dossier-item-icon"><i class="fas fa-id-card"></i></div>
-                <div class="dossier-item-text">
-                  <strong>Extrait d'acte de naissance</strong>
-                  <span>Moins de 6 mois</span>
-                </div>
-              </div>
-              <div class="dossier-item">
-                <div class="dossier-item-icon"><i class="fas fa-home"></i></div>
-                <div class="dossier-item-text">
-                  <strong>Certificat de résidence</strong>
-                  <span>Moins de 3 mois</span>
-                </div>
-              </div>
-              <div class="dossier-item">
-                <div class="dossier-item-icon"><i class="fas fa-graduation-cap"></i></div>
-                <div class="dossier-item-text">
-                  <strong>Photocopie certifiée du Baccalauréat</strong>
-                  <span>Ou relevé de notes officiel</span>
-                </div>
-              </div>
-              <div class="dossier-item">
-                <div class="dossier-item-icon"><i class="fas fa-envelope"></i></div>
-                <div class="dossier-item-text">
-                  <strong>Enveloppe timbrée</strong>
-                  <span>Timbre à 1 000 Ariary</span>
-                </div>
-              </div>
-              <div class="dossier-item">
-                <div class="dossier-item-icon"><i class="fas fa-money-bill-wave"></i></div>
-                <div class="dossier-item-text">
-                  <strong>Mandat poste de 20 000 Ar</strong>
-                  <span>À l'ordre de l'agent comptable de l'EFTA</span>
-                </div>
-              </div>
-            </div>
-            <div class="dossier-footer">
-              <div class="dossier-frais">
-                <i class="fas fa-info-circle"></i>
-                <div>
-                  <strong>Frais d'inscription au concours</strong>
-                  <span>20 000 Ariary · Mandat poste uniquement</span>
-                </div>
-              </div>
-              <a href="mailto:[EMAIL_CONTACT]?subject=Candidature EFTA Ambatobe" class="btn-candidater">
-                <i class="fas fa-paper-plane"></i>
-                Envoyer ma candidature
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== VIE À L'ÉCOLE ===== -->
-  <section id="vie" aria-label="Vie à l'école">
-    <div class="container">
-      <div class="vie-header">
-        <div class="section-label reveal">Vie Scolaire</div>
-        <h2 class="section-title reveal reveal-delay-1">
-          Une expérience <em>complète</em><br>et enrichissante
-        </h2>
-        <p class="section-desc reveal reveal-delay-2">
-          L'EFTA Ambatobe offre un cadre d'apprentissage alliant théorie et pratique terrain pour former des professionnels opérationnels dès la sortie.
-        </p>
-      </div>
-
-      <div class="vie-grid">
-        <div class="vie-card reveal">
-          <span class="vie-card-emoji" aria-hidden="true"><i class="fa fa-book"></i></span>
-          <h3 class="vie-card-title">Formations Pratiques</h3>
-          <p class="vie-card-desc">
-            Cours théoriques et travaux pratiques en salle et sur les parcelles expérimentales du campus.
-          </p>
-        </div>
-        <div class="vie-card reveal reveal-delay-1">
-          <span class="vie-card-emoji" aria-hidden="true"><i class="fa fa-leaf"></i></span>
-          <h3 class="vie-card-title">Stages en Milieu Rural</h3>
-          <p class="vie-card-desc">
-            Immersion complète dans des exploitations agricoles, d'élevage ou de pêche à travers Madagascar.
-          </p>
-        </div>
-        <div class="vie-card reveal reveal-delay-2">
-          <span class="vie-card-emoji" aria-hidden="true"><i class="fa fa-plane"></i></span>
-          <h3 class="vie-card-title">Voyages d'Études</h3>
-          <p class="vie-card-desc">
-            Visites d'exploitations modèles, d'unités de production et de sites agro-écologiques au niveau national.
-          </p>
-        </div>
-        <div class="vie-card reveal reveal-delay-3">
-          <span class="vie-card-emoji" aria-hidden="true"><i class="fa fa-graduation-cap"></i></span>
-          <h3 class="vie-card-title">Remise des Diplômes</h3>
-          <p class="vie-card-desc">
-            Cérémonie officielle nationale de sortie de promotion, porte d'entrée vers le monde professionnel agricole.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PARTENAIRES ===== -->
-  <section id="partenaires" aria-label="Nos partenaires">
-    <div class="container">
-      <div class="partenaires-header">
-        <div class="section-label reveal">Partenaires</div>
-        <h2 class="section-title reveal reveal-delay-1">
-          Un réseau <em>national & international</em><br>à votre service
-        </h2>
-        <p class="section-desc reveal reveal-delay-2">
-          L'EFTA Ambatobe bénéficie d'un réseau solide de partenaires institutionnels, techniques et financiers qui enrichissent nos formations et garantissent leur qualité.
-        </p>
-      </div>
-
-      <div class="partenaires-grid">
-        <div class="partenaire-card reveal">
-          <div class="partenaire-emblem" style="color:var(--blanc);">1</div>
-          <div class="partenaire-name">MINAE / MAEP</div>
-          <div class="partenaire-full">Ministère de l'Agriculture, de l'Élevage et de la Pêche — Madagascar</div>
-          <div class="partenaire-role">Tutelle officielle & financement public</div>
-        </div>
-        <div class="partenaire-card reveal reveal-delay-1">
-          <div class="partenaire-emblem" style="color:var(--blanc);">2</div>
-          <div class="partenaire-name">GSDM</div>
-          <div class="partenaire-full">Groupement Semi-Direct de Madagascar — Professionnels de l'Agro-écologie</div>
-          <div class="partenaire-role">Partenaire technique formation AC/AE</div>
-        </div>
-        <div class="partenaire-card reveal reveal-delay-2">
-          <div class="partenaire-emblem" style="color:var(--blanc);">3</div>
-          <div class="partenaire-name">AFD</div>
-          <div class="partenaire-full">Agence Française de Développement</div>
-          <div class="partenaire-role">Bailleur de fonds — Projet PAPAM</div>
-        </div>
-        <div class="partenaire-card reveal">
-          <div class="partenaire-emblem" style="color:var(--blanc);">4</div>
-          <div class="partenaire-name">Projet PAPAM</div>
-          <div class="partenaire-full">Projet d'Amélioration de la Productivité Agricole à Madagascar</div>
-          <div class="partenaire-role">Cadre de développement et de formation</div>
-        </div>
-        <div class="partenaire-card reveal reveal-delay-1">
-          <div class="partenaire-emblem" style="color:var(--blanc);">5</div>
-          <div class="partenaire-name">UNESCO-UNEVOC</div>
-          <div class="partenaire-full">Centre International de l'UNESCO pour la Formation Professionnelle</div>
-          <div class="partenaire-role">Partenaire international & réforme curriculaire</div>
-        </div>
-        <div class="partenaire-card reveal reveal-delay-2">
-          <div class="partenaire-emblem" style="color:var(--blanc);">6</div>
-          <div class="partenaire-name">DFAPP</div>
-          <div class="partenaire-full">Direction de l'Appui à la Formation Agricole et Professionnalisation des Producteurs</div>
-          <div class="partenaire-role">Coordination nationale des formations</div>
-        </div>
-      </div>
-
-      <!-- Réseau national -->
-      <div class="reseau-band reveal">
-        <h3 class="reseau-title">🇲🇬 Le Réseau National des 6 EFTA de Madagascar</h3>
-        <div class="reseau-grid">
-          <div class="reseau-item active">
-            <div class="reseau-item-flag">⭐</div>
-            <div class="reseau-item-name">Ambatobe</div>
-            <div class="reseau-item-loc">Antananarivo</div>
-          </div>
-          <div class="reseau-item">
-            <div class="reseau-item-flag"><i class="fa fa-university"></i></div>
-            <div class="reseau-item-name">Iboaka</div>
-            <div class="reseau-item-loc">Fianarantsoa</div>
-          </div>
-          <div class="reseau-item">
-            <div class="reseau-item-flag"><i class="fa fa-university"></i></div>
-            <div class="reseau-item-name">Analamalotra</div>
-            <div class="reseau-item-loc">Toamasina</div>
-          </div>
-          <div class="reseau-item">
-            <div class="reseau-item-flag"><i class="fa fa-university"></i></div>
-            <div class="reseau-item-name">Bezaha</div>
-            <div class="reseau-item-loc">Betioky, Toliara</div>
-          </div>
-          <div class="reseau-item">
-            <div class="reseau-item-flag"><i class="fa fa-university"></i></div>
-            <div class="reseau-item-name">Ambanja</div>
-            <div class="reseau-item-loc">Ambanja</div>
-          </div>
-          <div class="reseau-item">
-            <div class="reseau-item-flag"><i class="fa fa-university"></i></div>
-            <div class="reseau-item-name">Amborovy</div>
-            <div class="reseau-item-loc">Mahajanga</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ACTUALITÉS ===== -->
-  <section id="actualites" aria-label="Actualités">
-    <div class="container">
-      <div class="actu-header">
-        <div>
-          <div class="section-label reveal">Actualités</div>
-          <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:0">
-            La vie de <em>l'EFTA</em><br>en temps réel
-          </h2>
-        </div>
-        <a href="#contact" class="btn-secondary" style="border-color:var(--creme-fonce); color:var(--anthracite); white-space:nowrap;">
-          Toutes les actualités <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
+          Voir toutes nos formations
         </a>
       </div>
-
-      <div class="actu-grid">
-        <div class="actu-card reveal">
-          <div class="actu-card-img">
-            <span class="actu-card-img-label">Événement</span>
-            <img src="../assets/pictures/actu-img1.webp" alt="actu-image" loading="lazy">
-          </div>
-          <div class="actu-card-body">
-            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_CEREMONIE]</p>
-            <h3 class="actu-title">Cérémonie officielle de remise des diplômes — Promotion [ANNEE]</h3>
-            <p class="actu-desc">
-              Grande cérémonie nationale de sortie de promotion organisée à l'EFTA Ambatobe. Les lauréats du BTSA et du Certificat AC/AE reçoivent officiellement leurs diplômes en présence des autorités du MINAE.
-            </p>
-            <a href="#" class="actu-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="actu-card reveal reveal-delay-1">
-          <div class="actu-card-img" style="font-size:2.5rem;">
-            <span class="actu-card-img-label">Candidatures</span>
-            <img src="../assets/pictures/actu-img1.webp" alt="actu-image" loading="lazy">
-          </div>
-          <div class="actu-card-body">
-            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_OUVERTURE]</p>
-            <h3 class="actu-title">Ouverture des candidatures [ANNEE_SCOLAIRE]</h3>
-            <p class="actu-desc">Les dossiers de candidature pour la rentrée [ANNEE] sont désormais ouverts. Retrouvez toutes les modalités dans la section Admission.</p>
-            <a href="#admission" class="actu-link">Candidater <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        <div class="actu-card reveal reveal-delay-2">
-          <div class="actu-card-img" style="font-size:2.5rem;">
-            <span class="actu-card-img-label">Partenariat</span>
-            <img src="../assets/pictures/actu-img1.webp" alt="actu-image" loading="lazy">
-          </div>
-          <div class="actu-card-body">
-            <p class="actu-date"><i class="fas fa-calendar"></i> [DATE_PARTENARIAT]</p>
-            <h3 class="actu-title">Renforcement du partenariat EFTA-GSDM dans l'agro-écologie</h3>
-            <p class="actu-desc">Le GSDM et l'EFTA Ambatobe renforcent leur collaboration pour la formation de conseillers en Agriculture de Conservation.</p>
-            <a href="#partenaires" class="actu-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" aria-label="Contact">
+  <!-- ===== TÉMOIGNAGES ===== -->
+  <section id="temoignages" aria-label="Témoignages d'anciens étudiants">
     <div class="container">
-      <div class="contact-grid">
-        <!-- Info -->
-        <div class="reveal">
-          <div class="section-label">Contact</div>
-          <h2 class="contact-info h2" style="font-family:var(--font-titre);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:var(--vert-profond);margin-bottom:16px;line-height:1.2;">
-            Nous sommes à votre <em style="font-style:italic;color:var(--vert-foret);">écoute</em>
-          </h2>
-          <p class="contact-desc">
-            Une question sur nos formations, l'admission ou un partenariat ? N'hésitez pas à nous contacter. Notre équipe vous répondra dans les meilleurs délais.
+      <div class="temoignages-header">
+        <div class="section-label reveal">Témoignages</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Ce que disent nos <em>diplômés</em>
+        </h2>
+        <p class="section-desc reveal reveal-delay-2">
+          Ils ont suivi nos formations et construisent aujourd'hui leur carrière dans l'agriculture malgache.
+        </p>
+      </div>
+
+      <div class="temoignages-grid">
+        <div class="temoignage-card reveal">
+          <span class="temoignage-filiere">Agriculture</span>
+          <span class="temoignage-quote-icon">"</span>
+          <p class="temoignage-text">
+            L'EFTA m'a donné les outils concrets pour gérer une exploitation agricole. Les stages terrain ont été déterminants — je travaille aujourd'hui comme conseiller agricole dans la région Analamanga.
           </p>
-
-          <div class="contact-details">
-            <div class="contact-detail">
-              <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div class="contact-detail-text">
-                <strong>Adresse</strong>
-                <span>EFTA Ambatobe, Antananarivo-Nord, Région Analamanga, Madagascar</span>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
-              <div class="contact-detail-text">
-                <strong>Téléphone</strong>
-                <span>[TELEPHONE] — À mettre à jour</span>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
-              <div class="contact-detail-text">
-                <strong>Email</strong>
-                <span>[EMAIL_CONTACT] — À mettre à jour</span>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
-              <div class="contact-detail-text">
-                <strong>Horaires</strong>
-                <span>Lundi – Vendredi : 8h00 – 17h00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte -->
-          <div class="contact-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.0!2d47.5412!3d-18.8792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDUyJzQ1LjEiUyA0N8KwMzInMjguMyJF!5e0!3m2!1sfr!2smg!4v1000000000000"
-              allowfullscreen=""
-              loading="lazy"
-              title="Localisation EFTA Ambatobe"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-
-          <!-- Lignes de bus -->
-          <div style="margin-top: 16px;">
-            <p style="font-size:0.82rem;font-weight:600;color:var(--anthracite);margin-bottom:10px;">
-              <i class="fas fa-bus" style="color:var(--vert-foret);margin-right:6px;"></i>
-              Lignes de bus desservant Ambatobe :
-            </p>
-            <div class="bus-lines">
-              <span class="bus-pill">161</span>
-              <span class="bus-pill">183A</span>
-              <span class="bus-pill">135 VERT</span>
-              <span class="bus-pill">183B</span>
-              <span class="bus-pill">141</span>
-              <span class="bus-pill">147 BLEU</span>
-              <span class="bus-pill">147 ROUGE</span>
-              <span class="bus-pill">162</span>
-              <span class="bus-pill">192A</span>
-              <span class="bus-pill">192B</span>
-              <span class="bus-pill">194 BLEU</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Formulaire -->
-        <div class="reveal reveal-delay-2">
-          <div class="contact-form-wrapper">
-            <h3 class="form-title">Envoyer un message</h3>
-            <p class="form-sub">Tous les champs marqués * sont obligatoires.</p>
-            <form id="contactForm" enctype="text/plain" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="nom">Nom *</label>
-                  <input type="text" id="nom" name="nom" placeholder="Votre nom" required aria-required="true" />
-                </div>
-                <div class="form-group">
-                  <label for="prenom">Prénom *</label>
-                  <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required aria-required="true" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="votre@email.com" required aria-required="true" />
-              </div>
-              <div class="form-group">
-                <label for="telephone">Téléphone</label>
-                <input type="tel" id="telephone" name="telephone" placeholder="+261 XX XX XXX XX" />
-              </div>
-              <div class="form-group">
-                <label for="sujet">Objet *</label>
-                <select id="sujet" name="sujet" required aria-required="true">
-                  <option value="">Sélectionnez un objet</option>
-                  <option value="admission">Informations Admission</option>
-                  <option value="formations">Renseignements sur les Formations</option>
-                  <option value="partenariat">Proposition de Partenariat</option>
-                  <option value="diplome">Validation de Diplôme</option>
-                  <option value="autre">Autre demande</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" placeholder="Décrivez votre demande..." required aria-required="true"></textarea>
-              </div>
-              <button type="submit" class="btn-submit">
-                <i class="fas fa-paper-plane"></i>
-                Envoyer le message
-              </button>
-              <div class="form-success" id="formSuccess">
-                <i class="fas fa-check-circle" style="color:var(--vert-foret);margin-right:8px;"></i>
-                Message envoyé avec succès ! Nous vous répondrons bientôt.
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Brand -->
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="footer-logo-emblem">🌾</div>
+          <div class="temoignage-author">
+            <div class="temoignage-avatar">RR</div>
             <div>
-              <div class="footer-logo-name">EFTA Ambatobe</div>
-              <div class="footer-logo-sub">École de Formation de Technicien Agricole</div>
+              <div class="temoignage-name">Rakoto Ravo</div>
+              <div class="temoignage-promo">Promotion 2022 · BTSA Agriculture</div>
             </div>
           </div>
-          <p class="footer-brand-desc">
-            Former les techniciens agricoles de demain pour nourrir Madagascar aujourd'hui. École publique sous tutelle du MINAE depuis 2017.
+        </div>
+
+        <div class="temoignage-card reveal reveal-delay-1">
+          <span class="temoignage-filiere">Agro-écologie</span>
+          <span class="temoignage-quote-icon">"</span>
+          <p class="temoignage-text">
+            Le Certificat AC/AE m'a ouvert les portes des ONG internationales. Je coordonne aujourd'hui des projets d'agriculture de conservation financés par l'AFD dans plusieurs régions de Madagascar.
           </p>
-          <div class="footer-social">
-            <a href="#" aria-label="Facebook EFTA"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="YouTube EFTA"><i class="fab fa-youtube"></i></a>
-            <a href="#" aria-label="LinkedIn EFTA"><i class="fab fa-linkedin-in"></i></a>
+          <div class="temoignage-author">
+            <div class="temoignage-avatar">VR</div>
+            <div>
+              <div class="temoignage-name">Voahirana Razafy</div>
+              <div class="temoignage-promo">Promotion 2021 · Certificat AC/AE</div>
+            </div>
           </div>
         </div>
 
-        <!-- Liens rapides -->
-        <div>
-          <h4 class="footer-col-title">Liens rapides</h4>
-          <ul class="footer-links">
-            <li><a href="#about">À Propos</a></li>
-            <li><a href="#formations">Nos Formations</a></li>
-            <li><a href="#admission">Admission</a></li>
-            <li><a href="#vie">Vie Scolaire</a></li>
-            <li><a href="#actualites">Actualités</a></li>
-          </ul>
-        </div>
-
-        <!-- Formations -->
-        <div>
-          <h4 class="footer-col-title">Formations</h4>
-          <ul class="footer-links">
-            <li><a href="#formations">BTSA — 2 ans</a></li>
-            <li><a href="#formations">Certificat AC/AE — 1 an</a></li>
-            <li><a href="#admission">Conditions d'admission</a></li>
-            <li><a href="#admission">Dossier de candidature</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div>
-          <h4 class="footer-col-title">Contact</h4>
-          <ul class="footer-links">
-            <li><a href="#contact"><i class="fas fa-map-marker-alt" style="margin-right:6px;"></i>Ambatobe, Antananarivo</a></li>
-            <li><a href="tel:[TELEPHONE]"><i class="fas fa-phone" style="margin-right:6px;"></i>[TELEPHONE]</a></li>
-            <li><a href="mailto:[EMAIL_CONTACT]"><i class="fas fa-envelope" style="margin-right:6px;"></i>[EMAIL_CONTACT]</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2025 EFTA Ambatobe — Tous droits réservés · <a href="#">Mentions légales</a></p>
-        <div class="footer-maep">
-          <i class="fas fa-university"></i>
-          Sous tutelle du Ministère de l'Agriculture, de l'Élevage et de la Pêche — Madagascar
+        <div class="temoignage-card reveal reveal-delay-2">
+          <span class="temoignage-filiere">Élevage</span>
+          <span class="temoignage-quote-icon">"</span>
+          <p class="temoignage-text">
+            Venir de la campagne et intégrer l'EFTA a changé ma trajectoire. La formation en élevage m'a permis de professionnaliser l'exploitation familiale et d'augmenter notre production de 40%.
+          </p>
+          <div class="temoignage-author">
+            <div class="temoignage-avatar">TM</div>
+            <div>
+              <div class="temoignage-name">Tahiry Miandrisoa</div>
+              <div class="temoignage-promo">Promotion 2023 · BTSA Élevage</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Back to top -->
-  <button id="backToTop" aria-label="Retour en haut de page">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+  <!-- ===== CTA ADMISSION ===== -->
+  <section id="cta-admission" aria-label="Appel à candidature">
+    <div class="container">
+      <div class="cta-admission-inner reveal">
+        <div class="cta-admission-text">
+          <h2>
+            Prêt à rejoindre<br><em>l'EFTA Ambatobe ?</em>
+          </h2>
+          <p>
+            Les candidatures pour la rentrée [ANNEE_SCOLAIRE] sont ouvertes. Consultez les conditions d'accès et constituez votre dossier dès maintenant.
+          </p>
+        </div>
+        <div class="cta-admission-actions">
+          <a href="admission.html" class="btn-primary">
+            <i class="fas fa-file-alt"></i>
+            Voir les conditions d'admission
+          </a>
+          <a href="contact.html" class="btn-outline" style="border-color:rgba(255,255,255,0.4);color:rgba(255,255,255,0.85);">
+            <i class="fas fa-envelope"></i>
+            Nous contacter
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- ===== CHATBOT ===== -->
+  <!-- Footer injecté dynamiquement -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Chatbot -->
   <div id="chatbot-widget" aria-label="Assistant virtuel EFTA">
     <div id="chatbot-panel" role="dialog" aria-modal="true" aria-label="Chat avec l'assistant EFTA">
       <div class="chatbot-header">
@@ -980,34 +390,7 @@
     </button>
   </div>
 
-
-  <!--
-  ╔══════════════════════════════════════════════════════╗
-  ║       TODO : PERSONNALISER AVANT MISE EN LIGNE       ║
-  ╠══════════════════════════════════════════════════════╣
-  ║                                                      ║
-  ║  [EMAIL_CONTACT]     → Email officiel de l'EFTA      ║
-  ║  [TELEPHONE]         → Numéro de téléphone           ║
-  ║  [ANNEE_CONCOURS]    → Année du prochain concours    ║
-  ║  [ANNEE_SCOLAIRE]    → Ex: 2025-2026                 ║
-  ║  [DATE_CEREMONIE]    → Date de la cérémonie diplômes ║
-  ║  [DATE_OUVERTURE]    → Date ouverture candidatures   ║
-  ║  [DATE_PARTENARIAT]  → Date de l'actualité GSDM      ║
-  ║  [ANNEE]             → Année de promotion            ║
-  ║                                                      ║
-  ║  IMAGES À REMPLACER :                                ║
-  ║  → Hero : grande photo du campus ou d'étudiants      ║
-  ║  → About : photo du campus ou du directeur           ║
-  ║  → Actualités : photos des événements                ║
-  ║                                                      ║
-  ║  GOOGLE MAPS :                                       ║
-  ║  → Remplacer l'iframe src par le lien embed exact    ║
-  ║    de l'emplacement GPS de l'EFTA Ambatobe           ║
-  ║                                                      ║
-  ║  RÉSEAUX SOCIAUX :                                   ║
-  ║  → Mettre à jour les liens Facebook/YouTube/LinkedIn ║
-  ╚══════════════════════════════════════════════════════╝
-  -->
-
+  <script src="./src/js/main.js" defer></script>
+  <script src="./src/js/chatbot.js" async></script>
 </body>
 </html>

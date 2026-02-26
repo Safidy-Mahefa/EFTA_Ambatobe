@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — EFTA Ambatobe</title>
+  <meta name="description" content="Contactez l'EFTA Ambatobe : adresse, téléphone, email, horaires, carte et formulaire de contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="./src/css/all.min.css" />
+  <link rel="stylesheet" href="./src/css/global.css" />
+  <link rel="stylesheet" href="./src/css/pages.css" />
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <section class="page-hero" aria-label="En-tête contact">
+    <div class="page-hero-blob page-hero-blob-1"></div>
+    <div class="page-hero-blob page-hero-blob-2"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="page-hero-label"><i class="fas fa-envelope"></i> Contact</div>
+        <h1>Nous sommes à votre <em>écoute</em></h1>
+        <p class="page-hero-desc">
+          Une question sur nos formations, l'admission ou un partenariat ? Notre équipe vous répondra dans les meilleurs délais.
+        </p>
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" aria-label="Informations de contact et formulaire">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Info -->
+        <div class="reveal">
+          <div class="section-label">Coordonnées</div>
+          <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.4rem);">
+            Venez nous <em>rencontrer</em>
+          </h2>
+          <p class="contact-desc">
+            L'EFTA Ambatobe se trouve dans le quartier d'Ambatobe, au nord d'Antananarivo. Nous sommes ouverts du lundi au vendredi.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail-text">
+                <strong>Adresse</strong>
+                <span>EFTA Ambatobe, Antananarivo-Nord, Région Analamanga, Madagascar</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-detail-text">
+                <strong>Téléphone</strong>
+                <span>[TELEPHONE] — À mettre à jour</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail-text">
+                <strong>Email</strong>
+                <span>[EMAIL_CONTACT] — À mettre à jour</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-detail-text">
+                <strong>Horaires</strong>
+                <span>Lundi – Vendredi : 8h00 – 17h00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.0!2d47.5412!3d-18.8792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDUyJzQ1LjEiUyA0N8KwMzInMjguMyJF!5e0!3m2!1sfr!2smg!4v1000000000000"
+              allowfullscreen=""
+              loading="lazy"
+              title="Localisation EFTA Ambatobe"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Lignes de bus -->
+          <div style="margin-top:16px;">
+            <p style="font-size:0.82rem;font-weight:600;color:var(--anthracite);margin-bottom:10px;">
+              <i class="fas fa-bus" style="color:var(--vert-foret);margin-right:6px;"></i>
+              Lignes de bus desservant Ambatobe :
+            </p>
+            <div class="bus-lines">
+              <span class="bus-pill">161</span>
+              <span class="bus-pill">183A</span>
+              <span class="bus-pill">135 VERT</span>
+              <span class="bus-pill">183B</span>
+              <span class="bus-pill">141</span>
+              <span class="bus-pill">147 BLEU</span>
+              <span class="bus-pill">147 ROUGE</span>
+              <span class="bus-pill">162</span>
+              <span class="bus-pill">192A</span>
+              <span class="bus-pill">192B</span>
+              <span class="bus-pill">194 BLEU</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="reveal reveal-delay-2">
+          <div class="contact-form-wrapper">
+            <h3 class="form-title">Envoyer un message</h3>
+            <p class="form-sub">Tous les champs marqués * sont obligatoires.</p>
+            <form id="contactForm" action="mailto:[EMAIL_CONTACT]" method="post" enctype="text/plain" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nom">Nom *</label>
+                  <input type="text" id="nom" name="nom" placeholder="Votre nom" required aria-required="true" />
+                </div>
+                <div class="form-group">
+                  <label for="prenom">Prénom *</label>
+                  <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required aria-required="true" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="+261 XX XX XXX XX" />
+              </div>
+              <div class="form-group">
+                <label for="sujet">Objet *</label>
+                <select id="sujet" name="sujet" required aria-required="true">
+                  <option value="">Sélectionnez un objet</option>
+                  <option value="admission">Informations Admission</option>
+                  <option value="formations">Renseignements sur les Formations</option>
+                  <option value="partenariat">Proposition de Partenariat</option>
+                  <option value="diplome">Validation de Diplôme</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Décrivez votre demande..." required aria-required="true"></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i>
+                Envoyer le message
+              </button>
+              <div class="form-success" id="formSuccess">
+                <i class="fas fa-check-circle" style="color:var(--vert-foret);margin-right:8px;"></i>
+                Message envoyé avec succès ! Nous vous répondrons bientôt.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="./src/js/main.js" defer></script>
+</body>
+</html>
