@@ -1694,6 +1694,8 @@
       .container { padding: 0 16px; }
       .badge-f1 { top: -20px; right: -5px; animation-delay: 0s; }
       .badge-f2 { bottom: -20px; left: -10px; animation-delay: 2s; }
+      .about-img-tag{right: -10px; bottom: -10px; font-size: 0.7rem;}
+      .about-img-badge{top: 10px; padding: 0.5rem; left: -10px;}
       .hero-stats-grid { grid-template-columns: repeat(2, 1fr); }
       .stat-num { font-size: 2.5rem; }
       .vie-grid { grid-template-columns: 1fr; }
