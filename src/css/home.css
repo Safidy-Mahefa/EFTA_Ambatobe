@@ -636,6 +636,60 @@
     .about-tutelle strong { color: var(--anthracite); }
 /* ========== RESPONSIVE HOME ========== */
 @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 48px; padding: 120px 0 60px; }
+      .hero-visual { order: -1; max-width: 480px; margin: 0 auto; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      #about::before { display: none; }
+      .about-img-main { aspect-ratio: 16/7; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.08); }
+      .formations-grid { grid-template-columns: 1fr; }
+      .admission-grid { grid-template-columns: 1fr; }
+      .dossier-card { position: static; }
+      .vie-grid { grid-template-columns: repeat(2, 1fr); }
+      .partenaires-grid { grid-template-columns: repeat(2, 1fr); }
+      .reseau-grid { grid-template-columns: repeat(3, 1fr); }
+      .actu-grid { grid-template-columns: 1fr 1fr; }
+      .actu-grid .actu-card:first-child { grid-column: 1 / -1; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-form-wrapper { position: static; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+
+@media (max-width: 768px) {
+      section { padding: 70px 0; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-content { text-align: center; }
+      .hero-actions { justify-content: center; }
+      .hero-stats-grid { grid-template-columns: repeat(4, 1fr); }
+      .hero-stat-num { font-size: 1.3rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .vie-grid { grid-template-columns: repeat(2, 1fr); }
+      .partenaires-grid { grid-template-columns: 1fr; }
+      .reseau-grid { grid-template-columns: repeat(2, 1fr); }
+      .actu-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .about-features { grid-template-columns: 1fr; }
+      .modules-band { padding: 24px; }
+      .formations-grid { grid-template-columns: 1fr; }
+      .actu-header { flex-direction: column; align-items: flex-start; }
+    }
+
+@media (max-width: 530px) {
+      .container { padding: 0 16px; }
+      .badge-f1 { top: -20px; right: -5px; animation-delay: 0s; }
+      .badge-f2 { bottom: -20px; left: -10px; animation-delay: 2s; }
+      .about-img-tag{right: -10px; bottom: -10px; font-size: 0.7rem;}
+      .about-img-badge{top: 10px; padding: 0.5rem; left: -10px;}
+      .hero-stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-num { font-size: 2.5rem; }
+      .vie-grid { grid-template-columns: 1fr; }
+      .reseau-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+@media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; gap: 48px; padding: 120px 0 60px; }
   .hero-visual { order: -1; max-width: 480px; margin: 0 auto; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
